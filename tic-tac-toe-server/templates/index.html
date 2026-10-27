@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Tic Tac Toe</h1>
+    <p class="subtitle">Agent: X, Human: O</p>
+
+    <div class="controls">
+      <button id="new-game-btn">New Game</button>
+
+      <button id="who-starts-btn" class="toggle">Who Starts: Agent</button>
+
+      <select id="agent-type">
+        <option value="random">random</option>
+        <option value="qtable" disabled>qtable (coming soon)</option>
+      </select>
+    </div>
+
+    <div id="board" class="board">
+      <!-- 9 squares created by JS -->
+    </div>
+
+    <p id="status" class="status">Press New Game to start</p>
+  </div>
+
+  <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
